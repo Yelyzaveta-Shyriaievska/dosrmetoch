@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" href="modal.css">
+</head>
+<body>
+ <div class="wrapper">
+	 <h1>Способ доставки заказа</h1>
+	 <div class="sec1">
+		 <div class="block1 active" id="solo" onclick="sam()">
+		  <h2 id="solo">Самовывоз</h2>
+		  <img src="img/image_26.png" id="solo_img">
+		 </div>
+		 <div class="block2" id="cour" onclick="nesam()">
+			<h2 id="cour">Курьер</h2>
+			<img src="img/image_20.png" id="cour_img">
+		   </div>
+	 </div>
+	 <div class="sec2">
+		 <div class="sec2_block1 block" id="solo_block">
+			 <h2>Самовывоз</h2>
+			 <h4>Город:</h4>
+			 <input id="kr" type="button" value="Кривой Рог" class="btn active" onclick="one()">
+			 <input id="kiev" type="button" value="Киев" class="btn" onclick="two()">
+             <input id="harkov" type="button" value="Харьков" class="btn" onclick="three()">
+			 <input id="livov" type="button" value="Львов" class="btn" onclick="four()">
+			 <input id="ivan" type="button" value="Ивано-Франковск" class="btn" onclick="five()">
+			 <h4>Точка выдачи:</h4> 
+			 <input id="one_1" type="button" value="ул.Кропивницкого, 29в" class="btn point active" onclick="one_1()">
+			 <input id="one_2" type="button" value="просп.Победы, 41а" class="btn point" onclick="one_2()">
+             <input id="one_3" type="button" value="просп.Южный, 17, кв. 83" class="btn point" onclick="one_3()">
+			 <input id="one_4" type="button" value="ул.Эдуарда Фукса, 41" class="btn point" onclick="one_4()">
+			 <input id="one_5" type="button" value="просп.Попеды, 32" class="btn point" onclick="one_5()">
+			 <input id="one_6" type="button" value="просп.Мира, 31" class="btn point" onclick="one_6()">
+             <input id="one_7" type="button" value="ул.Адмирала Головко, 14" class="btn point" onclick="one_7()">
+			 <input id="one_8" type="button" value="ул.Соборности, 48" class="btn point" onclick="one_8()">
+			 <h4>Дата доставки:</h4>
+			 <input type="text" id="data" class="btn2">
+		 </div>
+		 <div class="sec2_block2 hide" id="cour_block">
+			<h2>Курьер</h2>
+			<h4>Адрес:</h4>
+			 <input type="text" id="addres_1" class="btn2">
+			 <h4>Дата доставки:</h4>
+			 <input type="text" id="data_1" class="btn2">
+             <h4>Примерное время доставки:</h4>
+			 <input type="text" id="vrema" class="btn2">
+		</div>
+	 </div>
+	 <div class="sec3" id="sec3">
+		 <h2>Способ оплаты:</h2>
+		<div class="sec3_method">
+		 <input type="button" value="Картой" id="karta_1" class="method1 active" onclick="kart()" >
+		 <input type="button" value="Наличные" id="lichnymy_1" class="method2"onclick="nekart()" >
+		</div>
+		<div class="karta" id="karta">
+		 <h4>Номер карты:</h4>
+			<input type="text" class="btn3" id="number_1" maxlength="4">
+			<input type="text" class="btn3" id="number_2" maxlength="4">
+			<input type="text"class="btn3" id="number_3" maxlength="4">
+			<input type="text"class="btn3" id="number_4" maxlength="4">
+		</div>
+		<div class="lichnymy hide" id="lichnymy">
+			<h4>Номер телефона:</h4>
+			<input type="number" class="btn2" id="telephone">
+			<h4>Подготовить сдачу с:</h4>
+			<input type="number" class="btn4" id="change"> грн.
+		</div>
+		<button onclick="show('block')"><input type="button" value="Заказать" id="ok" class="active_1" onclick="send()"></button>
+	    <div id="filter" onclick="show('none')"></div>
+	 </div>
+	 <div class="sec4" id="sec4"></div>
+	 
+ </div>
+</body>
+<script src="js/script.js" src="modal.js"></script>
+</html>
